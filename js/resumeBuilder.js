@@ -3,12 +3,35 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 var name = "Mario Tabarini";
 var role = "Web Developer";
+var email = "stuardomerida@gmail.com";
+var welcome = "Hello, welcome to the site!";
 var formattedName = HTMLheaderName.replace("%data%", name);
 var formattedRole = HTMLheaderRole.replace("%data%", role);
+var formattedEmail = HTMLemail.replace("%data%", email);
+var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", welcome);
+var skills = ["Programming", "Writing", "Cooking", "Dancing"]
+/*
 $("#header").append(formattedName);
 $("#header").append(formattedRole);
-
-/*$(document).ready(function() {
+$("#main").append(skills);
+$("#main").append(skills[0]);
+$("#main").append(skills.length);
+*/
+var bio = {
+	"name" : formattedName,
+	"role" : formattedRole,
+	"contact" : formattedEmail,
+	"picture" : HTMLbioPic,
+	"welcome" : formattedWelcomeMsg,
+	"skills" : skills,
+};
+$("#main").append(bio.name);
+$("#main").append(bio.role);
+$("#main").append(bio.contact);
+$("#main").append(bio.picture);
+$("#main").append(bio.welcome);
+$("#main").append(bio.skills);
+ /*$(document).ready(function() {
  	
  	$('#main').append('Mario');
  	var light = 299792458;
